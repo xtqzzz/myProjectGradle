@@ -21,7 +21,10 @@ public class DragAndDrop {
         open("https://the-internet.herokuapp.com/drag_and_drop");
 
 
-        actions().moveToElement($(byText("A"))).clickAndHold().moveByOffset(250, 0).release().perform();
+       // actions().moveToElement($(byText("A"))).clickAndHold().moveByOffset(250, 0).release().perform();
+
+        $("#column-a").dragAndDropTo($("#column-b"));
+
         $("#column-b").shouldHave(text("A"));
 
 
