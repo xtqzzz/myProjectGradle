@@ -29,10 +29,6 @@ public class HoverForSolutions {
         $(byText("Build like the best")).shouldBe(visible);
 
 
-        //$("a#wiki-tab").click();
-        //$("#wiki-pages-filter").setValue("SoftAssertions");
-        //$(byText("SoftAssertions")).click();
-        //$("div#wiki-content").shouldHave(text("2. Using JUnit4 just describe rule inside test class:"));
     }
 
 
