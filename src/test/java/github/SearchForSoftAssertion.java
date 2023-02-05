@@ -21,10 +21,9 @@ public class SearchForSoftAssertion {
     void searchJUnit5CodeTest() {
 
         open("/selenide/selenide");
-        $("ul.UnderlineNav-body li.d-inline-flex a#wiki-tab").click();
+        $("a#wiki-tab").click();
         $("#wiki-pages-filter").setValue("SoftAssertions");
-        $("#wiki-pages-box").$(byText("SoftAssertions")).click();
+        $(byText("SoftAssertions")).click();
         $("div#wiki-content").shouldHave(text("2. Using JUnit4 just describe rule inside test class:"));
-
     }
 }
