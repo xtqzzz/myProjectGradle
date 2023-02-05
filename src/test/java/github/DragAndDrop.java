@@ -22,9 +22,7 @@ public class DragAndDrop {
 
 
         actions().moveToElement($(byText("A"))).clickAndHold().moveByOffset(250, 0).release().perform();
-        sleep(3000);
         $("#column-b").shouldHave(text("A"));
-        sleep(3000);
 
 
 
