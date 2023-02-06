@@ -9,13 +9,17 @@ import static com.codeborne.selenide.Selenide.*;
 public class DragAndDrop {
     @BeforeAll
     static void beforeAll() {
-        Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl = "https://the-internet.herokuapp.com";
     }
     @Test
     void searchJUnit5CodeTest() {
-        open("https://the-internet.herokuapp.com/drag_and_drop");
-       // actions().moveToElement($(byText("A"))).clickAndHold().moveByOffset(250, 0).release().perform();
+        open("/drag_and_drop");
+        // option 1:
         $("#column-a").dragAndDropTo($("#column-b"));
+        // option 2: actions().moveToElement($(byText("A"))).clickAndHold().moveByOffset(250, 0).release().perform();
         $("#column-b").shouldHave(text("A"));
+        $("#column-a").shouldHave(text("B"));
+
+
     }
 }
