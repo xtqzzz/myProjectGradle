@@ -3,7 +3,6 @@ import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class DragAndDrop {
@@ -19,7 +18,5 @@ public class DragAndDrop {
         // option 2: actions().moveToElement($(byText("A"))).clickAndHold().moveByOffset(250, 0).release().perform();
         $("#column-b").shouldHave(text("A"));
         $("#column-a").shouldHave(text("B"));
-
-
     }
 }
